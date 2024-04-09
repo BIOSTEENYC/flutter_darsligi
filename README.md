@@ -1,16 +1,24 @@
-# flutter_darsligi
+# Flutter Darsligi
 
-flutterni oson o'rganish uchun darslik va amaliy mashqlar
+Bu loyiha, Flutter'ni o'rganishni osonlashtiruvchi amaliy mashqlar va izohlar yaratilgan.
 
-## Getting Started
+## Loyiha haqida
 
-This project is a starting point for a Flutter application.
+Flutter Darsligi loyihasi, Flutter'ni o'rganishni osonlashtirish uchun amaliy mashqlar va izohlar to'plami. Bu loyiha, dasturlashni o'rganayotganlar uchun mo'ljallangan.
 
-A few resources to get you started if this is your first Flutter project:
+## O'rnatish
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Bu loyiha Flutter bilan yaratilgan, shuning uchun uni ishga tushirish uchun sizga Flutter kerak bo'ladi. Flutter'ni o'rnatish haqida batafsil ma'lumotni bu yerda topishingiz mumkin.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Ishlatish
+
+Loyiha kodini o'zgartirish uchun, uni o'zingizning IDE'ingizga import qiling va `lib` papkasidagi fayllarni oching.
+Ishlashi uchun Flutter pub get buyrug'ini terminalda bering yoki pubspec.yaml fayliga o'ting va yuqoridagi pub get tugmasini bosing
+
+## Muallif
+
+Bu loyiha [Abdulhakim aL Biosteenyc] tomonidan yaratilgan. Agar sizda savollar bo'lsa, iltimos, menga murojaat qiling.
+telegram: Biosteenyc
+Instagram: Biosteenyc
+YouTube: Biosteenyc
+
