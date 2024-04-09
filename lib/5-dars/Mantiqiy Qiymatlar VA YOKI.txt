@@ -1,0 +1,18 @@
+      Mavzu: Mantiqiy qiymatlar
+   &&  -  (feat-feat)[bilan-bilan) Mantiqiy operatori dasturlashda VA deb
+tushuniladi
+   ||  - (Modul belgisi) Mantiqiy operatori dasturlashda yoki deb tushuniladi
+
+   && ning vazifasi
+   Agar qiymat
+              Rost      &&    Rost    = Rost
+              Yolg'on   &&    Rost    = Yolg'on
+              Rost      &&    yolg'on = Yolg'on
+              Yolg'on   &&    yolg'on = Yolg'on.
+________________________________________________________________________________
+  || ning vazifasi
+    Agar qiymat
+                 Rost       ||    Rost    =  Rost
+                 Yolg'on    ||    Rost    =  Rost
+                 Rost       ||    Yolg'on = Rost
+                 Yolgon     ||    Yolg'on = Yolg'on

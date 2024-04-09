@@ -1,0 +1,50 @@
+Mavzu: Container Column
+      Container - idish deb tarjina qilinadi
+   Column - ustun
+Eng avval proyekt yaratib olamiz. va main.dart ichidagi hamma narsani o'chirib tashlaymiz
+
+  1. stf deb yozamiz va enter bosamiz
+
+  2.Class dan keyin ilova nomini yozamiz. Masalan: MyApp
+
+  3.returndan keyingi const Placeholder() ni ochirib tashlaymiz va
+Scaffold deb yozib qovus ochib ichiga enter bosamiz
+
+  4.body: Column deb yozamiz qovus ochib enter bosamiz
+  5.Asosiy  yo'nalishlardan birini yozamiz:
+
+mainAxisAlignment: MainAxisAlignment.spaceBetween,  - O'zidan avval joy ochmay Container orasini
+ochadi.
+
+mainAxisAlignment: MainAxisAlignment.spaceAround, -  O'zidan avval bitta o'ziday joy ochib,Container
+orasini ochyapti
+
+mainAxisAlignment: MainAxisAlignment.spaceEvenly, - O'zidan avval o'ziga ikkita keladigan joy ochib,
+Container orasini ochadi
+
+mainAxisAlignment: MainAxisAlignment.start,       - Containerlarni Ekran boshiga taklamoqda
+
+mainAxisAlignment: MainAxisAlignment.center,      - Containerlarni  Ekran markaziga taklamoqda
+
+mainAxisAlignment: MainAxisAlignment.end,         - Containerlarni  Ekran oxiriga pastiga taklamoqda
+
+   6.children: [] yozib, burchakli qovus ichiga kirib enter bosamiz.
+
+   7.Container yozib qovs ochamiz, qovs ichiga kirib enter bosamiz
+
+   8.width: 100, yozamiz
+
+   9.height 100, yozamiz
+
+  10.color.Colors.green,
+
+  11.Containerning yopilish qovusi va vergulidan boshlab yuqoriga to Containergacha blokka olamiz
+  (containerni ham) va Ctrl + D tugmasini ikki marotaba bosamiz. Uchta container paydo bo'lado.
+
+  12. Container ranglarini har xil qilib o'zgartirib qo'yamiz Masalan: Colors.Black,Colors.blue
+
+  13. Eng yuqoriga main metodi va ilova yurgizuvchini yozamiz.
+
+          void main(){
+          runApp(MaterialApp(home: MyApp(),));
+          }

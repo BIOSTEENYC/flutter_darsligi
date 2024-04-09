@@ -1,0 +1,61 @@
+Mavzu: Dialoglar
+
+Alert dialog yaratish
+1.main.dart ichidagi kodni tozalab tashlaymiz. ctrl+A=>Delette
+
+2.material.dartni import qilamiz. import yozib enter, material yozib enter bosamiz.
+
+3.main metodi va ilova yurgizuvchini yozamiz.
+  void main(){ yozib enter bosamiz.
+runApp(MaterialApp(home: MyApp(),)); yozamiz.
+}
+
+4. void mainning yopiluvchi gulli qovusi } pastidan statefulWidget tashlaymiz. stf yozib enter
+bosamiz.
+
+5.Class dan keyin ilova nomini yozamiz. Masalan: MyApp
+
+6.return const placeholder()ni o'chirib, ScaffolWidget tashlaymiz: Scaffold yozib,qovus ochib, enter
+bosamiz.
+
+7. App bar tashlab mavzuni yozamiz.
+appBar: AppBar(title:Text('Dialogs'),),
+
+8.Bodyga CenterWidget tashlaymiz. CenterWidget-center widget ichidagi barcha narsani markazga oladi.
+AppBar yopiluvchi qovusidagi vergulidan keyin, enter bosib, body:Center yozamiz va qovus ochib enter
+ bosamiz.
+
+9. Childga MaterialButton tashlaymiz.
+child: yozib, Mbu yozamiz. hosil bo'lgan oynadan ikkinchi Material buttonga tushib enter bosamiz.
+MaterialButton(onPressed: onPressed), deb yozib beradi, ikkinchi onpressedni ochirib, (){} belgini
+qo'yamiz. va vergul qo'yib, child: Text('Dialogni ko'rsat'), color: Colors.blue, yozamiz.
+
+10. Endi diaolg ko'rsatishimiz kerak. dialog chiqarish uchun show dialog funksiyasini ishlatamiz.
+MaterialButtonning onpressed: (), ochiq yopiq qovusi ichiga kirib enter bosamiz va shDi deb yozib,
+enter bosamiz. showDialog(context: context, builder: builder) deb yozib beradi. contextning
+vergulidan keyin enter bosamiz.
+
+11.ikkinchi builderni ochhirib, qovus ochib, ichiga context deb yozamiz, qovusning yopilish
+qovusidan keyin ochiq yopiq gulli povus {}, yopiluvchi qovusdagi verguldan keyin
+child: Text("Show dialog") yozib vergul qo'yib, color: Colrs.green, deb yozamiz.
+
+12.contextning gulli qovusi {} ichiga kirib enter bosamiz. va return AlertDialog(); deb yozib enter
+bosamiz va quyidagi kodni yozamiz.
+                    title: Text('Ogohlantirish'),
+                    content: Text("rostdan ham yopasizmi?"),
+                    actions: [
+                      MaterialButton(onPressed: (){
+
+                      },
+                        child: Text("Yoq"),
+                        color: Colors.red,
+                      ),
+                      MaterialButton(onPressed: (){
+                        Navigator.pop(context);
+                      },
+                        child: Text("Ha"),
+                        color: Colors.blue,
+                      ),
+                    ],
+Bu dialog Ogohlantirishlar uchun ixtisoslashgan bo'lib, faqat unga sarlavha, kontent va harakatlar,
+ichiga tugmalar qo'ya olasiz.

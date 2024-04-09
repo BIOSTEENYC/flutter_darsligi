@@ -1,0 +1,57 @@
+Mavzu: Named route
+Oynalar bilan ishlashning ikkinchi usuli.
+1. Assalomu Alaykum
+
+2.main.dart ichidagi barcha kodni o’chirib tashlaymiz.
+
+3. 4 ta Class yaratamiz. Buning uchun projectimizning lib papkasiga sichqonchaning o’ng tugmasi yoki AltGr tugmasi yonidagi tortburchak tugmani bosamiz. New bo’limidan Dart file ni tanlaymiz. Hosil bo’lgan oynada IlovaXizmatchisi deb nomlab enter bosamiz. Ushbu usulda Uy, Qidirish, Hisob classlarnini yaratamiz.
+
+4.Ilova xizmatchisi.dart fayliga otamiz.
+Bu asosiy oyna hisoblanadi.
+Import yozib enter bosib. Material yozib enter bosamiz. Stf deb yozib enter bosmiz. Class dan keyin IlovaXizmatchisi deb yozamiz.
+Returndan keyingi const Placeholder() ni o’chirib. Scaffold yozib, qovus ochib, enter bosamiz.
+Sarlavha qoyamiz. Buning uchun appBar: AppBar yozib ochiq yopiq qovus ochib ichiga kirib enter bosamiz. title: yozib, Text yozamiz qovusi ichiga “Asosiy Oyna” deb yozamiz.
+
+5. Huddi shu usulda Uy, Qidirish, hisob class lariga ham statefull widget tashlaymiz,
+Material.dart ni import qilamiz, Returniga Scaffol widget tashlaymiz, Ichiga App Bar. App barga sarlavha, Sarlavhasiga Text yozamiz, Tekst qovusiga oyna nomini yozamiz.
+
+6.  main.dart ga o’tib main metodini yozamiz. void main(){} qovusi ichiga Ilova yurgizuvchi ya’ni runApp(); ni yozamiz. runApp qovusi ichiga MaterialApp() deb yozib qovus ichiga enter bosamiz.
+Ilovaga kirganimizda birinchi qaysi oyna(sahifa)ga kirishini belgilashimiz kerak. Masalan: Uy sahifasi, Qidirish sahifasi, Hisob sahifasi yoki IlovaXizmatchisi sahifasi. Bizning asosiy oynamiz IlovaXizmatchisi. Shunga kirishi kerak.
+Buning uchun.
+MaterialAppning Ochiluvchi qovusi pastidan initialRoute: yozib, bir tirnoq egri tayoqcha bir tirnoq ‘/’, belgini qoyamiz va enter bosamiz.
+InitialRoute – Dastlabki borish joyi degani. unga / belgisini qoydik.
+Pastdan belgi va so’zlarga oynalarni tenglaymiz.
+Buning uchun:  routes: yozib, gulli qovus ochib, enter bosamiz. ichiga quyidagini yozamiz:
+'/':(context)=>IlovaXizmatchisi(),
+'Uy':(context)=>Uy(),
+"Qidirish":(context)=>Qidirish(),
+'Hisob':(context)=>Hisob(),
+Bu yerda
+/ belgisi IlovaXizmatchisi nomli oynaga teng, Uy yozuvi Uy nomli oyanaga teng, Qidirish yozuvi Qidirish nomli oynaga teng, Hisob yozuvi Hisob nomli oynaga teng. Bizda oynalar .dart klasslardir.
+Ilovani yurguzib ko’ramiz. Yurguzib ko’rsak IlovaXizmatchisi oynasini ochib beradi. Main klasida / belgisini IlovaXizmatchisi oynasiga tenglagan edik. Va InitialRoute: ‘/’, qilib dastlab egri tayoqcha tenglangan oynani och deb buyuq bergandik. Tayoqchani qaysi oynaga tenglasak o’sha oynani ochadi.
+
+7. Ilova Xizmatchisini asosiy oyna deb belgiladik. Endi Ilova Xizmatchisi oynasi orqali Uy,Qidirish, Hisob oynalariga o’tishimiz kerak. Buning uchun. IlovaXizmatchisi oynasiga tugmalar tashlashimiz kerak.
+IlovaXizmatchilari.dart klassida joylashgan appBarning yopiluvchi qovusidagi vergulidan keyin enter bosamiz.
+
+ body: Column yozib, qovus ochib, ichiga enter bosamiz.
+children yozib, [] burchakli qovus, ichiga enter bosamiz.
+
+MBu yozib enter bosamiz. MaterialButton(onPressed: onPressed)
+deb yozib beradi. Ikkinchi onpressedni o’chirib (){} belgisini qo’yamiz.
+Qovusdan keyin vergul qoyib, child: Text(“Uy”),color:Colors.blue, satr ustiga kursrni qo’yib, 2 marotaba Ctrl + D tugmasini bossak ikkita nusxasi paydo bo’ladi. Asl nusxasi textiga Uy, Ikkinchi nusxasiga Textiga Qidirish, uchinchi nusxasi textiga Hisob deb yozamiz.
+
+Tugmalarni markazda joylashtirish uchun. Columnning ochilish qovusidan keyin enter bosib,
+mainAxisAlignment: MainAxisAlignment.center,
+deb yozamiz. bu vertikaldan markazga olib keladi.
+Gorizantaldan ham markazga olib kelish uchun Column ustiga kursorni olib borib Alt + Enter tugmasini bosib, hosil bo’lgan oynadan wrap with container bandini tanlash orqali Containerga o’raymiz va Containerning ochiluvchi qovusidan keyin enter bosib, width: double.infinity, yozib ilovani yurguzib ko’rsak tugmalar ilovaning qoq markazida joylashadi.
+Tugmalar bosilganda oynalarga o’tishi uchun avval Uy nomli tugmaning onPressedidagi gulli qovusi ichiga
+Navigator. pushNamed(context, ‘Uy’);
+Qidirish nomli tugmaning onPressedidagi gulli qovusi ichiga
+Navigator. pushNamed(context, ‘Qidirish’);
+ Hisob nomli tugmaning onPressedidagi gulli qovusi ichiga
+Navigator. pushNamed(context, ‘Hisob’);
+ deb yozamiz.
+
+Bu yo’lboshlovchi,Nomlangan oynaga yo’naltir degani.
+Ilovani yurguzib ko’ramiz.
+Tayyor.

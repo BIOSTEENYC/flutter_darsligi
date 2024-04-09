@@ -1,0 +1,71 @@
+ Mavzu: Bottom navigation bar
+  Bottom navigation bar - Ekranning pastidan chiqadigan ikonkali menyu.
+    1. main metodi va ilova yurgizuvchini yozamiz.
+          void main(){
+            runApp(MaterialApp(home: MyApp(),));
+            }
+
+      2. stf deb yozamiz va enter bosamiz
+
+      3.Class dan keyin ilova nomini yozamiz. Masalan: MyApp
+
+      4.returndan keyingi const Placeholder() ni ochirib tashlaymiz va
+Scaffold deb yozib qovus ochib ichiga enter bosamiz  !!! Enter tashlash majburiy emas.
+Ekranga sig'may qolmasin deyapman
+
+      5.appBar: AppBar yozib, qovs ochamiz. Ichiga kirib enter bosamiz
+
+      6.title: Text("BottomNavigationBar"), deb yozamiz.
+
+      7.  ▶ belgini bosib Ilovani yurguzib ko'ramiz.
+
+      8. AppBarning qovusi,verguli dan keyin enter bosib, body : deb yozamiz
+
+      9. hozircha  bodyga Container(color:Colors.grey), deb yozamiz va enter bosamiz
+
+      10. Ilovani bosib yurguzib ko'ramiz
+
+      11. bottomNavigationBar: BottomNavigationBar deb yozamiz va
+qovus ochib, qovus ichiga enter bosamiz
+
+      12. item:[] deb yozamiz va gulli qovus ichga kirib enter bosamiz. !!! item ichiga
+menyular kiritiladi
+
+      13. katta B harfini yozib, enter bossak. BottomNavigationBarItem(icon: icon)deb yozib beradi.
+( icon: icon-ni icon: Icon(Icons.home), ga o'zgartiramiz va label:"home"), deb yozamiz vergulni unutmang
+
+      14. Hozirgi qatorga kursorni qo'yib, Ctrl + D bossak pastga nusxalab beradi.
+Pastki qatorni Icons.search va lebel:search ga o'zgartiramiz
+
+      15. Ilovani yurgizib ko'ramiz.
+
+Siz ko'rgan paneldagi tugmalar hozir ishlamaydi faqat ko'rinadi. Ishlashi uchun yana kod yozamiz.
+Tugmalar bosilganda Oynalar almashishi kerak. Oynalar almashishi uchun
+oynalar, sahifalar  yaratamiz
+      18. Yuqoridagi class MyAppState extends State<MyApp> ning gulli qovusi ichiga
+list<Widget> pages= yozamiz burchakli qovus qo'yib, enter bosamiz.
+
+Dasturlashda 0 dan sanalgani bois oyna indeksini noldan boshlaymiz
+      19. Nolinchi sahifamiz. masalan... qora bo'lsin.
+Container(color: Colors.black), yozib star ichida Ctrl + D bosib nusxalaymiz.
+
+      20. birinchi  sahifamiz esa moviy bo'lsin, Container(color: Colors.cyanAccent),
+
+      21. List<Widget> pagesning yopiluvchi Burchakli qovusidagi ikki nuqtasi ]; dan so'ng enter bosib,
+int _selectedPageIndex = 0; deb yozamiz.
+ Bu Ilovaga kirganimizda nolinchi oyna tanlangan bo'lsin degani.
+ ( nolinchi oyna bizning ilovada home sahifa bo'lib, ranggi qora.
+
+      22. Ilovaga kirganimizda 0 sahifa tanlangan bo'lishi uchun bodydagi
+ Container(color: Colors.grey), ni ochirib, uning o'rniga pages[_selectedPageIndex], ni yozamiz.
+Bu  yuqorida joylashgan items ichidagi nolinchi indeksdagi containerni body ichiga olib keladi.
+
+      23. Oyna almashadi deyapmizu..., Aslida oyna emas , ilova tanasi, body almashadi.
+Tugma bosilganda body almashishi uchun itemsning yopiluvchi qovusigi vergul ], dan so'ng quyidagi
+kodni yozamiz.
+              onTap: (Index){
+            setState(() {                // bu yerda asosiysi setState
+              _selectedPageIndex=Index;
+            });
+
+     24. Ilovani yurguzib natijani ko'ring.

@@ -1,0 +1,64 @@
+ Mavzu: TabBarView
+         TabBar bu Tepadan chiqadigan, barmoq surganimizda oynalar almashadigan menyu.
+Bunga misol: Telegram plus menyusi.
+
+    1. main metodini yozib olamiz
+                void main(){
+                   runApp(MaterialApp(home: MyApp(),));
+                   }
+    2. stf deb yozamiz va enter bosamiz
+
+    3.Class dan keyin ilova nomini yozamiz: MyApp
+
+    4.returndan keyingi const Placeholder() ni ochirib tashlaymiz va
+Dtc deb yozsak Ikkita DefaultTabController chiqadi. 1-Konstukter yozilgan va 2-yozilmagan.
+Yozilganiga tushib enter bosamiz.
+
+    5.DefaultTabController( length: length, child: child) bu yerda length - menyu tanlanmalari soni
+length: 4, yozamiz va child:Scaffold deb yozib qovus ochib enter bosamiz
+
+    6. AppBar kiritamiz
+                         appBar: AppBar(
+            title: Text("TabBar"),
+
+    7. titlening yopiluvchi qovusidagi verguldan keyin enter bosamiz
+
+    8. Bottom: TB deb yozsak, ikkita TabBar chiqadi. menyulari bor TabBarga tushib enter bosamiz
+
+    9.bottom:TabBar(tabs: tabs), ikkinchi tabsni ochirib, o'rniga burchakli qovus [] qo'yib,
+ichiga enter bosamiz.
+
+    10.Ikonachka chaqiramiz. icon(Icons.home),  kursorni icon yozuvi ustiga qo'yib
+Ctrl + D tugmasini uch marotaba bosamiz, yana uchta yozib beradi.
+
+    11.Icon turini o'zgartiramiz:
+                Icon(Icons.home,),
+               Icon(Icons.search),
+               Icon(Icons.star),
+               Icon(Icons.person),
+
+    12. ▶ tugmani bosib ilovani yurguzib ko'ramiz (qurilmada, emulyatorda, yoki browserda).
+
+    13. Ilovamizda tugmalarni bossak oynalar almashyapti. Chunki oynalar yo'q. Almashadigan body yoq.
+
+    14. Oynalar yaratish uchun appBarning yopilivchi qovusidan keyingi, verguldan keyin enter bosamiz.
+
+    15. body: TBV deb yozsak 2 ta TabBarView chiqadi. menyulari bor TapBarView ga tushib enter bosamiz.
+
+    16. body: TabBarView(children: children ), ikkinchi childrenni ochirib, burchakli qovus [] qoyamiz
+va ichiga kirib enter bosamiz.
+
+    17. Containerlar yozamiz. C deb yozsak Container chiqadi enter bosamiz. Qouvisi ichga rang beramiz.
+color: (Colors.blue),
+
+    18. Container ichga kursorni qo'yib Ctrl + D bosamiz. tugmasini uch marta bosmamiz.
+Pastidan Uchta yozib beradi.
+
+    19. Ranglarini ozgartiramiz:
+                                Container( color: (Colors.blue),),
+                                Container( color: (Colors.orange),),
+                                Container( color: (Colors.green),),
+                                Container( color: (Colors.grey),),
+
+     20. ▶ tugmani bosib ilovani yurguzib ko'ramiz (qurilmada, emulyatorda, yoki browserda).
+     Tayyor.

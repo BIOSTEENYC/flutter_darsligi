@@ -1,0 +1,53 @@
+            Mavzu rasm qo'yish
+    1. main metodini va ilova yurgizuvchini yozamiz
+    void main(){
+      runApp(MaterialApp(home: MyApp(),));
+      }
+
+     2. stf deb yozamiz va enter bosamiz
+
+     3.Class dan keyin ilova nomini yozamiz: MyApp
+
+     4.returndan keyingi const Placeholder() ni ochirib tashlaymiz va Scaffold yozib, qovus ochib,
+qovus ichiga enter bosamiz.
+
+     5.appBar: AppBar yozib qovus ochib enter bosamiz
+
+     6.title: ("Rasm qo'yish"), deb yozamiz
+
+     7. Proyektimiz fayillarining eng asosiysi Flutter ikonkasi boriga kursorni olib borib
+sichqonchaning ong tugmasini yoki Alt-Gr tugmasi yonidagi tortburchak tugmani bosamiz
+
+     8. hosil bo'lgan oynadagi new bandiga kursorni olib boramiz va hosil bolgan oynadan directory
+bandiga kursorni olib borib enter bosamiz.
+
+     9. New directory oynachasidagi name bo'limi orqali yangi papkani kichik harflarda nomlaymiz
+Masalan: assets.  Enter bosamiz
+
+     10.Endi xotiradan rasm tanlaymiz. O'zingizni fayl menejeringiz TotalComander yoki MyComputerdan
+rasm topib nusxalab olamiz (Ctrl+C)
+
+     14. Proyektimizdagi assets papkamiz ustiga kursrni olib borib tanlab Crtl + V bosamiz
+
+     15. Fayl nomi flutter qo'llay olmaydigan nomda bo'lsa hosil bo'lgan oynada qayta nomlab enter
+bosamiz
+
+     16.proyektimizdagi  pubspec.yaml fayilini ochamiz.
+
+     17. 63 - qatordam 66 - qatorgacha belgilab ctrl + ?/ tugmasini bosamib izohdan chiqaramiz
+
+     18. assets yozuvini uses-material-design: true yozuvi bilan bir chiziqqa tekkislaymiz.
+
+     19. #   - images/a_dot_burr.jpeg
+         #   - images/a_dot_ham.jpeg yozuvlarini ochirib tashlaymiz.
+
+     20. hosil bo'lgan bo'sh joyga kursorni qoyib assets yozuvi bilan bir chiziqda Tab tugmasini
+bitta bosamiz. va - assets/ yozib pub get tugmasini bosamiz. Behato yozilsa ishlaydi.
+
+     21. body: Center() qovus ochib ichiga enter bosamiz
+
+     22. child ga Image.asset yozib, qovus ochib, qovus ichiga " yuqori qosh tirnoq qo'yib ichga
+rasm manzilini yozamiz. rasm nomi assets papkasidagi rasm nomidir.
+      child: Image.asset("assets/rasm.jpg"),
+
+     23. ▶ tugmani bosib ilovani yurgizamiz.

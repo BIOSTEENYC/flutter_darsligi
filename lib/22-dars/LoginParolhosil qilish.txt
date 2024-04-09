@@ -1,0 +1,105 @@
+Mavzu: Login Parol oynasi
+Login va parolni kiritib, tugmani bossa
+oynani ochadigan, xato bo'lsa xatoligini aytadigan dastur
+1.Eng avval yangi dart fayl yaratib.
+ ichiga stateful vidget va Scaffold va app bar tashlaymiz.
+
+2.main.dart ichidagi shablon kodni o'chiramiz.
+Hamda main metodi, ilova yurgizuvchi, ilova
+turi va ilova nomini yozamiz.
+  void main(){
+    runApp(MaterialApp(home: LoginParol(),));
+  }
+
+3.Stateful Widget tashlaymiz.
+stf deb yozamiz, enter bosamiz. Class dan keyin
+Ilova nomini yozamiz. Bizda nomi: LoginParol
+
+4.ScaffoldWidget tashlaymiz.
+returndan keyin const placeholder() ni o'chirib
+Scaffold deb yozamiz. enter bosamiz
+
+5.Ilovaga Sarlavha qo'yamiz
+appBar: AppBar(title:Text("LoginParol"),),
+
+6. Ikkita o'zgaruvchi olib matntahrirlash nazoratchisi
+widgetini tashlaymiz:
+class _LoginParolState extends State<LoginPArol> ning
+ochiluvchi gulli qovusidan keyin enter bosib buni
+yozamiz.
+TextEditingController login=TextEditingController();
+TextEditingController parol=TextEditingController();
+7.Ilova tanasi(body)ga Column tashlab, TextFiled
+tashlaymiz.
+body: Column yozib qovus ochamiz va ichiga kirib enter bosamiz.
+
+8.Markazda aks ettirish uchun
+mainAxisAlignment: MainAxisAlignment.center,
+
+9.pastdan Children yozib ikki marta enter bosamiz.
+
+10.TF deb yozib ikki marta enter bosamiz.
+
+11.Paddingga o'raymiz. TextFiled ustiga kursorni qo'yib
+Alt + Enter bosamiz. hosil bo'lgan bo'limdan
+wrap with Padding bandiga tushib enter bosamiz.
+
+12.TextField ichga Controller yozib login
+o'zgaruvchimizni ko'rsatamiz.
+controller: login
+
+13.Text fieldni bezatamiz.
+decoration: InputDecoration yozib qovus ochib enter bosamiz.
+hintText:("login kiriting"),
+border: OutlineInputBorder(),
+hintText -  matn kiritilmaganda ko'rinib turuvchi matn
+
+14.padding yopiluvchi qovusidan keyin vergul qo'yib enter
+bosamiz va shu joydan to padding yozuvigacha
+(padding yozuvini ham) tepaga qarab belgilaymiz. va Ctrl+D
+bosib nusxalaymiz.
+
+15.Nusxalangan Text Fieldning Controlleridan login so'zini
+o'chirib parol deb yozish orqali ikkinchi o'zgaruvchini
+ko'rsatamiz. hintText da ham loginni parolga o'zgartiramiz
+
+16. ikkinchi paddingni yopiluvchi qovusidagi vergulidan
+ keyin enter bosamiz va tugma tashlab Tugma bosilganda
+ login va parol to'gri kiritilsa oynani ochadigan,
+ xato kiritsa xatokikni e'lon qiladigan kod yozamiz.
+ MaterialButton(
+onPressed: (){
+MaterialButton(
+            onPressed: (){
+
+            {
+              if(
+              Login.value.text == "Admin@Super.uz"&&Parol.value.text == "SuperAdmin2428"
+              ){
+                Navigator.push(context,
+                    MaterialPageRoute(
+                        builder: (context)=>Malumot()));
+              }
+              if(
+              Login.value.text == ""&&Parol.value.text == ""
+              ){
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text(
+                    "Bo'm boshku?"
+                  ),
+                )
+                );
+              }
+              else(
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text(
+                      "Login yoki parol"
+                  )
+              )
+              )
+              );
+            }
+              },
+            color: Colors.blue,
+            child: Text("ko'rsatish"),
+          )

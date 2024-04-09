@@ -1,0 +1,63 @@
+Mavzu: List View
+ListView Ketma Ket ko'rsatiladigan ro'yxat. Columnga o'xshash, Columndan farqi Column Faqat ekranga
+siqqanicha ko'rsatsa, ListView ekranga siqmagan ro'yxatga pastga yutguzuvchi panel ham yaratadi.
+
+ListView Ikki hil bo'ladi.
+LisView - Bu statik ListView bo'lib qancha qiymat kiritganimizni belgilaymiz.
+ListView.builder - bu dinamik listview bo'lib avtomatik tarzda ro'yxat soniga qarab kengayadi.
+
+  ListView da ismlar ro'yxati
+1. Material.dart ni import qilamiz.
+import yozib enter bosamiz. material yozib enter bosamiz.
+
+2. main metdodi va ilova yurgizuvchini yozamiz.
+void main(){
+runApp(MaterialApp(home: MyApp(),));
+}
+
+3. Stateful Widget tashlaymiz.
+stf deb yozib enter bosamiz va class dan keyin ilova nomini yozamiz Masalan: MyApp
+
+4.Scaffold wiget tashlaymiz. Scaffold bizga kerak bo'lgan barcha widgetlarni saqlaydi.
+Scaffold yozib enter bosamiz, qovus (); ochib ichiga kirib enter bosamiz.
+
+5. Ilovamizga sarlavha qo'yamiz.
+appBar:AppBar(title:Text("ListView.builder Dinamik")),
+
+6. List ro'yxat yaratib olamiz ismlar ro'yxati
+class _MyAppState extends State<MyApp> { ning ochilish qovusidan keyin enter bosamiz va pastidan
+List<String> Ismlar =[
+                 "Biosteenyc",
+                 "SBroid",
+                 "XA",
+                 "Virtual X",
+                 "Abdulhakim",
+                 "**********",
+                     "Abdulloh",
+               ]; deb list kiritamiz.
+ Bu yerda list ro'yxat String ismlar - satr qabul qiladigan o'zgaruvchi
+
+7.  bodyga ListView builder yaratib olamiz.
+AppBarning yopiluvchi qovusidagi vergulidan keyin enter bosamiz va pastki qatordan LV deb yozib,
+enter bosamiz.ListView dan keyin nuqta qo'yib b yozib enter bosamiz.
+ ListView.builder(itemBuilder: itemBuilder); deb yozib beradi.
+ ListView.builderning ochiluvchi qovusi ichiga kursorni qo'yib ikki marta enter bosamiz.
+hosil bo'lgan bo'sh joyga itemCount: Ismlar.length,  deb yozamiz.
+Ikkinchi itemBuilderni o'chirib,BC yozib enter, co yozib enter bosamiz. BuildContext context deb
+yozib beradi. vergul qo'yib, int index deb yozamiz. Bu 0 - ismdan boshlab chiqarsin degani.
+ItemBuilderning yopiluvchi qovusidan keyin gulli qovus {} ochamiz. va ichiga kirib enter bosamiz.
+
+8.Royxatni chiqarish
+Container(
+            height: 80,
+            width: double.infinity,
+            color: Colors.green,
+          ),
+deb yozamiz va containerning yopiluvchi qovusidan keyin vergul qo'yib, enter bosib, shu joydan
+container yozuvigacha belgib olamiz Container yozuvini ham. Ctrl + D tugmasini 6 marta bosib
+nusxalamiz. Chunki bizda yettita ism bor.
+ Tayyor boldi.
+  ilovani yurguzib ko'ring.
+
+margin: Containerni chekkadan olib qochish
+

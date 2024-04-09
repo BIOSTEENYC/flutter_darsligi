@@ -1,0 +1,77 @@
+
+Mavzu: Navigator.
+oyna bilan ishlash
+Navigation push
+1.main.dart ichidagi kodni tozalab tashlaymiz
+
+2.Proyektimizga ikkinchi oynani yaratamiz. Ong taraf chetida proyektimiz fayllari joylashgan.
+Mavjud bo'lmasa Project bo'limiga bosing. Proyektimiz faylidagi lib ga o'ng tugmani bosib new
+bo'limdan dart faylga tanlaymiz va ikkinchi-oyna deb enter bosamiz.
+
+3.Ikkinchi-oyna.dart ga o'tib stf yozib, class dan keyin Ikkinchi-oyna deb yozamiz.
+Qizil xatoga ahamiyat bermang. Scaffold deb yozib, enter bossak Material.dart ni import qiladi.
+return dan keyin placeholde() ni ochirib Scaffold deb yozib enter bosamiz.
+ Ikkinchi oyna ekanligini
+anglash uchun scaffold ichiga appBar:AppBar(title:Text("ikkinchi oyna")); deb yozamiz
+
+4.main.dart ga o'tib main metodini yozamiz.
+     void main(){
+        runApp(Material(home:MyApp());
+       }
+5.stf deb yozib enter bosamiz class dan keyin MyApp deb yozamiz. returndan keyin placeholder()ni
+o'chirib Scaffold() yozamiz va qovus ichiga kirib enter bosamiz.
+appBar:AppBar(title:Text("AsosiyOyna"),), deb yozamiz.
+
+6.tugma qo'yamiz.AppBarning yopiluvchi qovusidagi verguldan keyin  body: Center(
+child: MaterialButton(
+color: Colors.blue,
+onPressed:(){
+Navigator.push(
+context,MaterialPageRoute(
+builder: (context)=>IkkinchiOyna()));
+},
+child:Row(
+mainAxisSize:MainAxisSize.min,
+children: [
+Icon(Icons.home),
+SizedBox(
+width: 10,),Text("Home")
+   ],
+  ),
+ )
+), deb yozamiz
+
+5. Yurguzib ko'ramiz.
+Ilovadagi tugmaga bossak, oyna ustiga yangi oyna chiqyapti. va appBarda qaytish tugmasi ham paydo
+bo'ldi. Demak Navigator.push oyna ustiga oyna qo'shadi.
+
+Biz tugmani bossak, Keyingi oynaning appBarida orqga strelkasi orqali qaytyapmiz. Agar Ikkinchi
+oynaga AppBar qo’ymasak u tugma chiqarmaydi shunda ikkinchi oynada ortga qaytaruvchi tugma qo’yamiz.
+Buning uchun ikkinchi-oyna.dart ga o’tib, tugma qo’yamiz. body: Center(  child: MaterialButton(
+      color: Colors.blue,
+      onPressed: (){
+        Navigator.pop(context);
+      },
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.account_circle_outlined,color: Colors.yellow,),
+          SizedBox(
+            width: 10,
+          ),
+          Text("qaytish")
+        ],
+      ),
+    )
+),
+
+Ilovani yurguzib ko’ramiz.
+Navigator.pop -  oynani yo’q qilish.
+
+Biz Navigator.Push. qilib navigate.pop oyanalr yarataversak ustma-usta oynalar ko’payib ketadi.
+Va ilova sifatiga shikast yetadi. Bunday holatda biz Oynani o’chirib, Ikkinchi oynaga almashtirish
+uchun Biz asosiy oynaga ya’ni main dartdagi Navigator.push o'rniga Navigator.pushReplacementni yozib
+hal qilamiz.
+
+mainAxisSize: MainAxisSize.min – Asosiy yo’nalish olcham minimal degani.
+Biz ekranga to’lib qolgan tugmani matn va ikonkaning minimal o’lchamini hisoblashi uchun ishlatdik.

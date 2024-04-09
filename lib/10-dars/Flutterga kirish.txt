@@ -1,0 +1,23 @@
+              Mavzu: Flutterga Kirish
+     AppBar va ikonka
+proyekt yaratamiz va main.dart ichidagi hamma narsani o'chirib tashlaymiz.
+    1.stf deb yozib enter nosamiz.
+    2.class yozuvidan keyin Ilova nomini yozamiz Masalan:MyApp
+    3. return satridan const Placeholder() ni ochirib,
+o'rniga Scaffold deb qovus ochib ichga kirib enter bosamiz
+    4.appBar: AppBar deb quvus ochib ichiga enter bosamiz
+    5.title: Text("Flutter"), yozib enter bosamiz
+    6.actions : [] deb yozib burchakli qovus ichiga enter bosamiz
+    7.IconButton deb yozib enter bosamiz
+    8.Ikkinchi onPressed ni ochirib, (){}, icon: Icon(Icons.add)), deb
+yozamiz
+    9. On pressed {} gulli quvusi ichiga enter bosamiz.
+    10.ScaffoldMassanger.of(context).showSnackbar(SnackBar(content:Text("add")));
+deb yozamiz.
+    11. Eng yuqoriga o'tib main metodi va ilova yurgizuvchini yozamiz.
+          void main(){
+          runApp(MaterialApp(home: MyApp(),));
+          }
+debug bannerini yo'qotmoqchi bo'lsangiz, MyApp()ning vergulidan keyin,
+debugShowCheckedModeBanner: false,
+deb yozing

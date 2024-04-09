@@ -1,0 +1,127 @@
+Mavzu: Expanded.
+Expanded kengayuvchi widget.
+1.main.dart ichidagi shablon kodni o'chiramiz.
+Hamda main metodi, ilova yurgizuvchi, ilova
+turi va ilova nomini yozamiz.
+  void main(){
+    runApp(MaterialApp(home: Expanded0,));
+  }
+
+2.Stateful Widget tashlaymiz.
+stf deb yozamiz, enter bosamiz. Class dan keyin
+Ilova nomini yozamiz. Bizda nomi: Expanded0
+
+3.ScaffoldWidget tashlaymiz.
+returndan keyin const placeholder() ni o'chirib
+Scaffold deb yozamiz. enter bosamiz
+
+4.Ilovaga Sarlavha qo'yamiz
+appBar: AppBar(title:Text("Expanded"),),
+
+5.bodyga Center widget
+ body: Center(),
+
+6. childiga Container beramiz
+child: Container(),
+
+7.Containerga o'lcham beramiz
+child: Container(
+height: 100,
+width: 300,
+color: Colors.green,
+),
+Ilovani yurgizib ko'ramiz.
+
+8.Endi Expanded bilan tanishamiz.
+Container ichiga child yozib, childiga
+qizil rangli container beramiz.
+child:Container(color:Colors.red,),
+Ilovani yurguzib ko'ramiz.
+Yurgizsak: Ikkinchi qizil rangli kontainer,
+ birinch yashil rangli Kontainerni to'liq
+ qoplaganini ko'rdik.
+
+9. child:Container(color:Colors.red,), ochirib tashlaymiz.
+ Row tashlab childreniga qizil rangli container tashlaymiz.
+  Row(
+             children: [
+                   child: Container(color: Colors.red,),
+                   ]
+     }
+  Yurguzib ko'ramiz. Yurguzsak Qizil kontainerni ko'rmaymiz.
+  Sababi o'lchami yo'q. O'lcham bersak ko'rinadi.
+  Row(
+               children: [
+                     child: Container(color: Colors.red,height:100,width:100,),
+                     ]
+       }
+  Yurguzib ko'ramiz. Container ichiga container bersak,
+   ichdagi container tashqaridagi containerni qamrab oladi.
+
+7.Bizga ekranni yarmi qizil yarimi sariq rangli to'rtburchak chiqsin
+degan misol berilgan bo'lsa biz o'z ekranimizga moslab yaratsak,
+boshqa ekranlarda xatolik chiqadi. shuning uchun Center widget ichidagi
+yashil rangli container ichiga with bermaymiz, bergan bo'lsak ochiramiz.
+ body: Center(
+ child: Container(
+ height: 100,
+ color: Colors.green,
+ child:Row(
+          children: [
+          child: Container(color: Colors.red,height:100,width:100,),
+                 ]
+            }
+ ),
+ ),
+ ),
+ Yurguzsak. butun kenglik bo'ylab yoyilgan container chiqadi.
+
+ 8.Endi buni yarmini topish uchun. Rowning childreni ichidagi containerni
+  width va heighttini o'chirib tashlaymiz. va container usitga kursorni qo'yib,
+  Ctrl+D tugmasini bosib, nusxalaymiz. va ranggini sariqqa O'zgartiramiz.
+  Container(color: Colors.red,),
+  Container(color: Colors.yellow,),
+Yurguzib ko'ramiz. Yurguzsak containerni ko'rmaymiz. Shuning uchun
+ Containerlarni Expanded widgetga o'raymiz.
+ Alt+Enter->Wrap with widget->widgetni o'chirib Expanded yozamiz.
+ Bu yerda Expanded Widget containerning ichidagi containerlarni Kengaytiradi..
+  child:Row(
+           children: [
+           Expanded( child: Container(color: Colors.red,)),
+           Expanded(child: Container(color: Colors.yellow,)),
+                  ]
+             }
+  ),
+  ),
+  ),
+  Yurguzib ko'ramiz. Teng yarmidan chiqadi.
+
+9. Agar Ekranni Yarimini emas  faqat 1, 2 yoki 3 qismini
+deb belgilash uchun flexdan foydalanamiz.
+body: Center(
+        child: Container(
+          height: 100,
+          color: Colors.green,
+          child: Row(
+            children: [
+              Expanded(
+                flex: 2,
+                  child: Container(
+                    color: Colors.red,
+                  )
+              ),
+              Expanded(
+                flex: 1,
+                  child: Container(
+                    color: Colors.yellow,
+                  )
+              ),
+            ],
+          ),
+        ),
+      ),
+      BU qanday ishlaydi. 2 ga 1 ni qo'shadi.
+      Natijaning 2 qismi qizil, 1 qismi sariq deb
+      belgilaydi.
+
+      Demak Expanded kengayuvchi widget.

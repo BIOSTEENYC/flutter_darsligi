@@ -1,0 +1,19 @@
+
+
+           Asosiy tushunchalar
+
+    Kod yozish uslubi:   KOD YOZAYOTGANDA kodni hammasini harflab yozmang, ikkita uchta harfini
+yozsangiz IDLE kodni taklif qiladi, kodga tushurib enter bossangiz, o'zi yoazadi.
+
+    Izoh: Dasturga matn kiritish uchun izohdan foydalaning
+// Bitta satr uchun izoh.
+Agar matn yoki Kodni muzlatishni istasangiz matn boshiga /*,
+matn oxiriga */ qo'ying.
+
+    Vergul, Qovus, Gulli qovus va boshqa belgilarni qo'yishda adashib ketmang.
+
+    Blokka olishda (nusxalash,yoki qirqish)da kodni ochilish va yopilish belgilarini hisobga oling.
+
+    Imkon qadar 10 ta barmoqda yozishga harakat qiling. Minimal ikkita barmoqda. Bitta barmoqda
+ aslo yozmang.
+

@@ -1,0 +1,98 @@
+17 - mavzu
+     Mavzu: Containerni bezash va button(tugma)
+     1.main metodini yozib olamiz.
+        void main(){
+        runApp(MaterialApp(home: MyApp(),));
+        }
+
+     2.stf deb yozamiz, enter bosazmiz va Class dan keyin MyApp deb yozamiz
+
+     3. Scaffold deb yozamiz, qovus ochamiz(), qovus ichga enter bosamiz.
+   Scaffold - bu Barcha ilovalarga kerak bo'lgan hususiyatlarni jamlagan widget.
+
+     4. appBar: AppBar deb yozib qovus ochamiz () qovus ichiga kirib enter bosamiz.
+
+     5. title: Text("Container Decorate and Button"), deb yozamiz  title - bu app bar sarlavhasi.
+
+     6. AppBarning yopilivchi qovusidan keyingi vergulidan keyin enter bosamiz va
+body: Center deb yozib qovus ochib, ichiga enter bosamiz
+
+     7. Container yozob qovus ochib, enter bosib, (width:100, enter bosib, height:100),. deb yozamiz
+
+     8. Ilovani yurguzib ko'ramiz. Yurgizganimizda hech narsani ko'rmaymiz.
+Chunki Container hozir ko'rinmas,rangsiz. rang ham beramiz. height 100, width:100, dan keyin
+color:Colors.green,), deb yozib, ilovani yurgizsak kontainer ko'rinadi.
+
+     9. Endi kontainerni bezatib shaklini ozgartiribko'ramiz. buning uchun. Containerning
+ochiluvchi qovusidan keyin enter bosib, decoration: BoxDecoration deb yozib qovus ochib ()
+qovus ichiga enter bosamiz
+
+     10. borderRadius:BorderRadius.circular(10), deb yozamiz  border radius kontainer burchaklarini
+yumaloqlash.
+
+     11. Containerning ichidagi rangni (color: Colors.green)ni decoration ichiga ko'chiramiz.
+Ko'chirmasak xato chiqadi.
+
+     12.Ilovani yurguzib ko'ramiz. Yurguzganimizda Kontainer qirralari yumaloqlanganini ko'ramiz.
+Biz faqat bir tarafini yumaloqlashni istasak. circularni qovusi bilan o'chirib only deb yozamiz va
+qovus ochamiz
+
+     13.qovusi ichga topLeft:Radius.circular(30) deb yozamiz. yurguzib ko'rsak kontainerning faqat
+tepadan chap tarafi yumaloqlangaini ko'ramiz.
+
+     14.O'ng tarafiniyam yumaloqlanishini hohlasak.(30), dan keyin bottomRight: Radius.circular(30)
+deb yozamiz. Yurgizsak Yuqoridan chap, pastda o'ng burchagi yumaloqlanganini ko'ramiz.
+
+     15.kontainerga Chegara berishni istasak border:Border.all(width:2,color:Colors.black)
+deb yozamiz. yurguzsak kontainerdan qora chegara chiziqni ko'ramiz.
+
+     16.Endi tugma qo'yishni o'rganamiz. Hozir tugma yozolmaymiz. container faqat bitta child oladi
+holos. Shu sabab bodydagi centerni Columnga o'zgartiramiz.
+ Containerni o'zidan yopilish qovusigacha blokka olib Ctrl+X tugmasi orqali chontakka qirqib olamiz
+va childni childrenga ozgartirib [] burchakli qovus qo'yib ichiga enter bosamiz.
+     So'ng Ctrl+V bosib containerni qo'yamiz.
+
+    17. Containerning yopiluvchi qovusidan keyingi verguli pastidan MBu enter bosamiz. MaterialButton(onPressed: onPressed) deb
+yozib beradi. Ikkinchi onpressedni o'chirib, (){},child:Text("SnackBar"),color.Colors.green deb
+yozamiz va ilovani yur'gizib ko'ramiz
+
+    18. Ko'rganingizdek container va button yopishib qoldi. orasini ochmoqchi bo'lsangiz.
+Container yopiluvchi qovus vergulidan keyin. pastdan SizedBox(height:50,), yozamiz. Yurguzsak orasi
+50 o'lchamga ochilganini ko'ramiz.
+
+    19. Tugmani bosganimizda SnackBar yozuvini chiqarish uchun. on pressedning gulli qovusi ichiga
+ ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("salom"))); deb yozamiz
+va yurguzib ko'ramiz
+
+    20. Containerni ham tugma sifatida ishlatish uchun Container widget ga o'rab qoyamiz
+va OnTab hususiyatini beramiz. Buning uchun. Container Ustiga kursorni qo'yib Alt + Enter bosib
+hosil bo'lgan oynadan Wrap with Widget bandiga bosamiz.
+
+    21.Widgetga oraldi. Widgetni o'chirib, o'rniga InkWell deb yozsak container bosiladigan bo'ldi.
+Pastdan OnTab(){} gulli husuiyatini yozib gulli qovusi ichiga
+ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("SnackBar"),)); yozazmiz
+va Yurguzib ko'ramiz.
+Endi Container bosiladigan bo'ldi. Har qanday widgetni inkwellga o'rasi bosiladi. Hatto Rasm ham.
+
+   22. Ikonkani bosiladigan qilish.
+   Ikonkali tugmamiz yuqoridagi tugmaga yopishib qolmasligi uchun MaterialButtonning yopiluvchi
+   qovusi dan keyin enter bosib, pastidan SizedBox(height:30,), deb yozamiz va enter bosamiz.
+   Container yozib qovus ochamiz, ichiga kirib enter bosamiz.
+child:Icon(Icons.home), deb yozamiz va child ga kursorni qo'yib, Alt + Enter bosib hosil bo'lgan
+oynadan Wrap with Widget bandiga bosamiz.Widgetga oraldi. Widgetni o'chirib, o'rniga InkWell deb
+yozmaiz.  Pastdan OnTab(){}  husuiyatini
+yozib gulli qovusi ichiga
+ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("salom"))); yozazmiz.
+
+   23. Bilishimiz kerak bo'lgan Tugmalar:
+   Ikonkali tugmalarga yopishib ketmaslik uchun Iconka joylashgan Containerning yopiluvchi qovusidan
+keyin enter bosib, SizedBox(height:30,),
+Column deb yozib qovus ochamiz. qovus ichiga kirib enter bosamiz.
+children: [], qovus ichiga enter bosamiz.
+      MaterialButton(onPressed(){},child: Text("MaterialButton"),color.Colors.green),
+       SizedBox(height: 10,),
+      TextButton(onPressed(){},child: Text("TextButton"),),
+       SizedBox(height: 10,),
+      ElevatedButton(onPressed: (){}, child: Text("ElevetedButton"))
+
+      Tayyor.

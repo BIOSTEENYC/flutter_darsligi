@@ -1,0 +1,84 @@
+Mavzu: Text Field
+Text filed - kiritilgan matnni qabul
+qiluvchi widget
+Login va parolni kiritib, tugmani bossa
+login va parolni ko'rsatuvchi dastur.
+
+1.main.dart ichidagi shablon kodni o'chiramiz.
+Hamda main metodi, ilova yurgizuvchi, ilova
+turi va ilova nomini yozamiz.
+  void main(){
+    runApp(MaterialApp(home: TextField0(),));
+  }
+
+2.Stateful Widget tashlaymiz.
+stf deb yozamiz, enter bosamiz. Class dan keyin
+Ilova nomini yozamiz. Bizda nomi: TextFiled0
+
+3.ScaffoldWidget tashlaymiz.
+returndan keyin const placeholder() ni o'chirib
+Scaffold deb yozamiz. enter bosamiz
+
+4.Ilovaga Sarlavha qo'yamiz
+appBar: AppBar(title:Text("TextField"),),
+
+5. Ikkita o'zgaruvchi olib matntahrirlash nazoratchisi
+widgetini tashlaymiz:
+class _TextField0State extends State<TextField0> ning
+ochiluvchi gulli qovusidan keyin enter bosib buni
+yozamiz.
+TextEditingController loginNazoratchisi=TextEditingController();
+TextEditingController parolNazoratchisi=TextEditingController();
+Bu yerda
+birinchi TextEditingController Class,
+loginNazoratchisi o'zgaruvchi.
+ikkinchi TextEditingController klassdan olingan obyekt.
+
+6.Ilova tanasi(body)ga Column tashlab, TextFiled
+tashlaymiz.
+body: Column yozib qovus ochamiz va ichiga kirib enter bosamiz.
+
+7.Markazda aks ettirish uchun
+mainAxisAlignment: MainAxisAlignment.center,
+
+8.pastdan Children yozib ikki marta enter bosamiz.
+
+9.TF deb yozib ikki marta enter bosamiz.
+
+10.Paddingga o'raymiz. TextFiled ustiga kursorni qo'yib
+Alt + Enter bosamiz. hosil bo'lgan bo'limdan
+wrap with Padding bandiga tushib enter bosamiz.
+
+11.TextField ichga Controller yozib loginNazoratchisi
+o'zgaruvchimizni ko'rsatamiz.
+controller: loginNazoratchisi
+
+12.Text fieldni bezatamiz.
+decoration: InputDecoration yozib qovus ochib enter bosamiz.
+hintText:("login kiriting"),
+border: OutlineInputBorder(),
+hintText -  matn kiritilmaganda ko'rinib turuvchi matn
+
+13.padding yopiluvchi qovusidan keyin vergul qo'yib enter
+bosamiz va shu joydan to padding yozuvigacha
+(padding yozuvini ham) tepaga qarab belgilaymiz. va Ctrl+D
+bosib nusxalaymiz.
+
+14.Nusxalangan Text Fieldning Controlleridan login so'zini
+o'chirib parol deb yozish orqali ikkinchi o'zgaruvchini
+ko'rsatamiz. hintText da ham loginni parolga o'zgartiramiz
+
+15. ikkinchi paddingni yopiluvchi qovusidagi vergulidan
+ keyin enter bosamiz va tugma tashlab Tugma bosilganda
+ login va parolni ekranga chiqaradigan kod yozamiz.
+ MaterialButton(
+onPressed: (){
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text(
+  loginNazoratchisi.value.text+" "+ parolNazoratchisi.value.text),
+               )
+               );
+             },
+             color: Colors.blue,
+             child: Text("ko'rsatish"),
+           )

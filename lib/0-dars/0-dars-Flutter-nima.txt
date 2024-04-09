@@ -1,0 +1,10 @@
+____________________________________________________________________________________________________
+        Flutter nima?
+Flutter bu Zamonaviy FrameWork bo'lib, U orqali Tez va Oson Ko'plam qurilmalarga dastur tuzishimiz
+mumkin.
+    Flutter - mobil qurilmalar, desktop qurilmalar(Kompyuterlar) va Web saytlar Front endiga dastur
+yaratadigan tizimdir
+    Flutterning dasturlash tili, Dart dasturlash tilidir. Boshlang'ich 7ta darsda Dart DMU da kod
+yozmaiz, Keyin Flutter kodlarini yoza boshlaymiz.
+    Qani kettik.
+____________________________________________________________________________________________________
