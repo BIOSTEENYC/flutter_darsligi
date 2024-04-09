@@ -12,7 +12,7 @@ Bu loyiha Flutter bilan yaratilgan, shuning uchun uni ishga tushirish uchun sizg
 
 ## Ishlatish
 
-Loyiha kodini o'zgartirish uchun, uni o'zingizning IDE'ingizga import qiling va `lib` papkasidagi fayllarni oching.
+Loyiha kodini ishlatish uchun, uni o'zingizning IDE'ingizga import qiling va `lib` papkasidagi fayllarni oching.
 Ishlashi uchun Flutter pub get buyrug'ini terminalda bering yoki pubspec.yaml fayliga o'ting va yuqoridagi pub get tugmasini bosing
 
 ## Muallif
